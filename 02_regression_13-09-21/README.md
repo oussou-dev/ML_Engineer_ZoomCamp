@@ -1,5 +1,3 @@
-- [x] 01-what-is-ml
-
 ## 2. Machine Learning for Regression
 
 - [x] Car price prediction project
