@@ -3,7 +3,7 @@
 - [x] Churn prediction project
 - [x] Data preparation
 - [x] Setting up the validation framework
-- [x] 3.4 EDA
+- [x] EDA
 - [x] Feature importance: Churn rate and risk ratio
 - [x] Feature importance: Mutual information
 - [x] Feature importance: Correlation
