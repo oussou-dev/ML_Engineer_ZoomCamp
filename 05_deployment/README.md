@@ -1,15 +1,15 @@
 ## 5. Deploying Machine Learning Models
 
-- [x] [Intro / Session overview](01-intro.md)
-- [x] [Saving and loading the model](02-pickle.md)
-- [x] [Web services: introduction to Flask](03-flask-intro.md)
-- [x] [Serving the churn model with Flask](04-flask-deployment.md)
-- [x] [Python virtual environment: Pipenv](05-pipenv.md)
-- [x] [Environment management: Docker](06-docker.md)
-- [x] [Deployment to the cloud: AWS Elastic Beanstalk (optional)](07-aws-eb.md)
-- [x] [Summary](08-summary.md)
-- [x] [Explore more](09-explore-more.md)
-- [x] [Homework](homework.md)
+- [x] Intro / Session overview  
+- [x] Saving and loading the model  
+- [x] Web services: introduction to Flask  
+- [x] Serving the churn model with Flask  
+- [x] Python virtual environment: Pipenv  
+- [x] Environment management: Docker  
+- [x] Deployment to the cloud: AWS Elastic Beanstalk (optional)  
+- [x] Summary  
+- [x] Explore more  
+- [x] Homework  
 
 
 ## Community notes
