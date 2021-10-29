@@ -1,16 +1,17 @@
-## 7. Midterm Project
+## **7. Midterm Project**
 
+<br>
 
 ### **Project** : **_Allstate Claims Severity_**  (How severe is an insurance claim?)
-
-
-<span>
-  <img src="https://www.kaggle.com/static/images/site-logo.png" width="150" title="Kaggle">  
-</span>
+<br>
 
 <span>
-<a src="https://www.kaggle.com/c/allstate-claims-severity" >AllState </a>
+  <img src="https://www.kaggle.com/static/images/site-logo.png" width="90" title="Kaggle">  
 </span>
+
+[AllState](https://www.kaggle.com/c/allstate-claims-severity)
+
+<br>
 
 ### **Description**
 
@@ -20,11 +21,14 @@ This is why [Allstate](https://www.allstate.com/), a personal insurer in the Uni
 
 ![alt text](https://storage.googleapis.com/kaggle-competitions/kaggle/5325/media/allstate_banner-660x120.png)
 
+<br>
+
 ### **Goal**
 
 Predict how severe insurance claims will be for AllState  
 Using ensemble machine learning algorithms
 
+<br>
 
 ###  **Plan**
 
@@ -40,16 +44,22 @@ Using ensemble machine learning algorithms
 - Containerization via Docker
 - Cloud  deployment
 
+<br>
 
 ### **Data**
 
 
+<br>
+
 ### **Dependency and enviroment management**
 
 
+<br>
 
 ### **Containerization**
 
+
+<br>
 
 ### **Cloud deployment**
 
