@@ -23,14 +23,14 @@ This is why [Allstate](https://www.allstate.com/), a personal insurer in the Uni
 
 <br>
 
-### **Goal**
+### **Goal**  
 
 Predict how severe insurance claims will be for AllState  
-Using ensemble machine learning algorithms
+Using ensemble machine learning algorithms  
 
 <br>
 
-###  **Plan**
+###  **Plan**  
 
 - Dataset overview
 - EDA
@@ -46,21 +46,37 @@ Using ensemble machine learning algorithms
 
 <br>
 
-### **Data**
+### **Data**  
 
+- Look `data` folder  
 
 <br>
 
-### **Dependency and enviroment management**
+### **Dependency and enviroment management**  
 
+`pip install -r requirements.txt`  
 
 <br>
 
 ### **Containerization**
 
+- Build the Docker image by running  
+`docker build -t flask-heroku:latest .`  
+
+- And then run it using    
+`docker run -d -p 5000:5000 flask-heroku`  
 
 <br>
 
 ### **Cloud deployment**
 
+- Deploying the container to Heroku 
 
+`heroku container:login`  
+
+`heroku create` or `heroku create yourawesomeapp`  
+
+`heroku container:release web --app yourawesomeapp`  
+
+Now it is time to check out our awesome app running on Heroku  
+https://yourawesomeapp.herokuapp.com
