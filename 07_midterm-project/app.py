@@ -8,48 +8,48 @@ import numpy as np
 from pandas.io.json import json_normalize
 
 app = Flask(__name__) #create the Flask app
-
+port = int(os.environ.get("PORT", 5000))
 
 @app.route('/load_model',methods=['POST'])
 def load_model():
     req_data = request.get_json()
     test_data_subset = pd.DataFrame.from_dict(json_normalize(req_data), orient='columns')
     
-    #load the columns to drop file
+    # load the columns to drop file
     columns_to_drop=pd.read_csv("/model/columns_to_drop.csv")
     
-    #select the columns to be retained
+    # select the columns to be retained
     columns_to_Retain = set(test_data_subset.columns.values) - set(columns_to_drop.colnames.values)
     test_data_selected_columns = test_data_subset[columns_to_Retain]
     
-    #select the categorical columns from the dataframe
+    # select the categorical columns from the dataframe
     column_datatypes = test_data_selected_columns.dtypes
     categorical_columns = list(column_datatypes[column_datatypes=="object"].index.values)
     
-    #read the label encoders and apply the encoded values to the categorical variables
+    # read the label encoders and apply the encoded values to the categorical variables
     for cf1 in categorical_columns:
         filename = "/model/"+cf1+".sav"
         le = pickle.load(open(filename, 'rb'))
         
-        #if an new classes is observed, set it to the 0 class
+        # if an new classes is observed, set it to the 0 class
         le_dict = dict(zip(le.classes_, le.transform(le.classes_)))
         test_data_selected_columns[cf1]=test_data_selected_columns[cf1].apply(lambda x: le_dict.get(x, -1))
     
     test_data_id = test_data_selected_columns['id']
     test_data_selected_columns = test_data_selected_columns.drop('id',axis=1)
 
-    #convert the interger columns to categories as required by the ML model    
+    # convert the interger columns to categories as required by the ML model    
     Column_datatypes= test_data_selected_columns.dtypes
     Integer_columns = list(Column_datatypes.where(lambda x: x =="int64").dropna().index.values)
     
-    #convert the int64 columns categorical
+    # convert the int64 columns categorical
     test_data_selected_columns[Integer_columns] = test_data_selected_columns[Integer_columns].astype('category',copy=False)
     
-    #load the saved model and predict on the test data
+    # load the saved model and predict on the test data
     tuned_model = pickle.load(open("/model/tunedmodel_rf", 'rb'))
     Y_test_predict = tuned_model.predict(test_data_selected_columns)
     
-    #create a new output dataframe
+    # create a new output dataframe
     output = pd.DataFrame()
     output['id']=test_data_id
     output['predict_loss']=Y_test_predict
@@ -58,4 +58,4 @@ def load_model():
     return output
 
 if __name__ =='__main__':
-    app.run(debug=True,port=4000)#run app in debug mode on port 4000
+    app.run(debug=True, host='0.0.0.0',port=port) # run app in debug mode on port 5000
