@@ -60,6 +60,9 @@ Using ensemble machine learning algorithms
 
 ### **Containerization**
 
+- Install Docker  
+https://docs.docker.com/get-docker/  
+
 - Build the Docker image by running  
 `docker build -t flask-heroku:latest .`  
 
@@ -69,6 +72,11 @@ Using ensemble machine learning algorithms
 <br>
 
 ### **Cloud deployment**
+
+
+- Install Heroku CLI  
+https://devcenter.heroku.com/articles/heroku-cli#download-and-install  
+
 
 - Deploying the container to Heroku 
 
