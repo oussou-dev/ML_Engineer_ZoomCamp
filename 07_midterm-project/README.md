@@ -46,9 +46,18 @@ Using ensemble machine learning algorithms
 
 <br>
 
-### **Data**  
 
-- Look `data` folder  
+### **Clone repo**
+
+- Clone this repo
+
+`git clone https://github.com/oussou-dev/ML_Engineer_ZoomCamp.git`  
+
+
+- Change into the `07_midterm-project` directory  
+
+`cd ML_Engineer_ZoomCamp/07_midterm-project`   
+
 
 <br>
 
@@ -58,13 +67,30 @@ Using ensemble machine learning algorithms
 
 <br>
 
+
+### **Run Notebooks (preference) or scripts**  
+
+- Notebooks  
+
+`1_EDA_Cleaning_Baseline.ipynb`  
+
+`2_Model_Loss_Prediction`    
+
+
+- Scripts
+
+`python3 scripts/train_data.py`
+
+
 ### **Containerization**
 
 - Install Docker  
 https://docs.docker.com/get-docker/  
 
+
 - Build the Docker image by running  
 `docker build -t flask-heroku:latest .`  
+
 
 - And then run it using    
 `docker run -d -p 5000:5000 flask-heroku`  
@@ -85,6 +111,7 @@ https://devcenter.heroku.com/articles/heroku-cli#download-and-install
 `heroku create` or `heroku create yourawesomeapp`  
 
 `heroku container:release web --app yourawesomeapp`  
+
 
 Now it is time to check out our awesome app running on Heroku  
 https://yourawesomeapp.herokuapp.com
