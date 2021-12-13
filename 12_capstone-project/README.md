@@ -51,9 +51,9 @@ Forecast the "Sales" column
 `git clone https://github.com/oussou-dev/ML_Engineer_ZoomCamp.git`  
 
 
-- Change into the `07_midterm-project` directory  
+- Change into the `12_capstone-project` directory  
 
-`cd ML_Engineer_ZoomCamp/07_midterm-project`   
+`cd ML_Engineer_ZoomCamp/12_capstone-project`   
 
 
 <br>
@@ -69,46 +69,25 @@ Forecast the "Sales" column
 
 - Notebooks  
 
-`1_EDA_Cleaning_Baseline.ipynb`  
-
-`2_Model_Loss_Prediction`    
+`0_rossmann.ipynb`  
 
 
+- CMD
+
+  * `python3 engine.py` : execute all scripts in folder `scripts` and generate model (`RF` by default)
+  
 - Scripts
 
-`python3 scripts/train_data.py`
+  * Add model => `scripts/Train_model.py`
+  * Change model name to generate => ligne 75 : `engine.py`
 
 
 ### **Containerization**
 
-- Install Docker  
-https://docs.docker.com/get-docker/  
-
-
-- Build the Docker image by running  
-`docker build -t flask-heroku:latest .`  
-
-
-- And then run it using    
-`docker run -d -p 5000:5000 flask-heroku`  
+- [ ] in progress
 
 <br>
 
 ### **Cloud deployment**
 
-
-- Install Heroku CLI  
-https://devcenter.heroku.com/articles/heroku-cli#download-and-install  
-
-
-- Deploying the container to Heroku 
-
-`heroku container:login`  
-
-`heroku create` or `heroku create yourawesomeapp`  
-
-`heroku container:release web --app yourawesomeapp`  
-
-
-Now it is time to check out our awesome app running on Heroku  
-https://yourawesomeapp.herokuapp.com
+- [ ] in progress
